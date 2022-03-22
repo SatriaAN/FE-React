@@ -1,4 +1,8 @@
-// Membuat Navbar
+/**
+ * Membuat fungsi Header
+ * @returns Navbar
+ */
+
 function Header() {
   return (
     <nav>
@@ -11,4 +15,5 @@ function Header() {
   );
 }
 
+// Export header
 export default Header;

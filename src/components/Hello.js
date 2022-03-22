@@ -1,6 +1,10 @@
+// Import Css
 import "../App.css";
 
-// Membuat fungsi Hello
+/**
+ * Membuat fungsi Hello
+ * Membuat className hello
+ */
 function Hello(props) {
   const { name } = props;
   return (
@@ -11,4 +15,5 @@ function Hello(props) {
   );
 }
 
+// Export Hello
 export default Hello;

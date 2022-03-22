@@ -1,0 +1,71 @@
+.container {
+  margin: 1rem;
+}
+
+.hero {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__left {
+  padding: 0.8rem 1rem;
+}
+
+.hero__img {
+  border-radius: 25px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.hero__h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #4361ee;
+}
+
+.hero__label {
+  font-family: "Poppins";
+  font-size: 24px;
+  color: #64748b;
+}
+
+.hero__input {
+  border-color: #4361ee;
+  border-radius: 6px;
+}
+
+.hero__button {
+  margin-top: 1rem;
+  padding: 0.3rem 4.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4361ee;
+  color: #fff;
+}
+
+/* Tampilan Medium / Tab */
+@media (min-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero__right {
+    margin-left: 3rem;
+  }
+}
+
+/* Tampilan Large */
+@media (min-width: 992px) {
+  .hero {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+}
