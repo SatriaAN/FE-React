@@ -64,10 +64,12 @@
   }
 
   .hero__left {
+    margin-left: 5rem;
     flex-basis: 40%;
   }
 
   .hero__right {
+    margin-left: 12 rem;
     flex-basis: 60%;
   }
 }

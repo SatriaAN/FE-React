@@ -40,11 +40,15 @@
 
 .hero__button {
   margin-top: 1rem;
-  padding: 0.3rem 4.1rem;
+  padding: 0.3rem 3.4rem;
   border: none;
   border-radius: 8px;
   background-color: #4361ee;
   color: #fff;
+}
+
+.hero__select {
+  margin-top: 0.5rem;
 }
 
 /* Tampilan Medium / Tab */

@@ -1,16 +1,15 @@
 import Movie from "../Movie/Movie.js";
 import styles from "./Movies.module.css";
+import { nanoid } from "nanoid";
 
-import data from "../../utils/data.js";
-import { useState } from "react";
-
-function Movies() {
-  const [movies, setMovies] = useState(data);
+function Movies(props) {
+  // destructing props
+  const { movies, setMovies } = props;
 
   // Membuat fungsi untuk handle click
   function handleClick() {
     const movie = {
-      id: "xyz",
+      id: nanoid(),
       title: "Ip Man",
       year: 2022,
       type: "Movie",

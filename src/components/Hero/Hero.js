@@ -17,7 +17,7 @@ function Hero() {
         <div className={styles.hero__right}>
           <img
             className={styles.hero__img}
-            src="https://picsum.photos/650/400 "
+            src="https://picsum.photos/300/445 "
             alt=""
           />
         </div>

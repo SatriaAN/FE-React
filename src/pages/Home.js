@@ -4,13 +4,20 @@ import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
 import Movies from "../components/Movies/Movies";
 import AddMovieForm from "../components/AddMovieForm/AddMovieForm";
+import { useState } from "react";
+import data from "../utils/data";
 
 // Membuat fungsi main untuk menampung Hero dan Movies
 function Main() {
+  // lifting state from movies.js
+  const [movies, setMovies] = useState(data);
+
+  // mengirim props ke movies dan addMovieForm
   return (
     <main>
       <Hero />
-      <Movies />
+      <Movies movies={movies} setMovies={setMovies} />
+      <AddMovieForm movies={movies} setMovies={setMovies} />
     </main>
   );
 }
@@ -21,7 +28,6 @@ function Home() {
     <div>
       <Navbar />
       <Main />
-      <AddMovieForm />
       <Footer />
     </div>
   );
