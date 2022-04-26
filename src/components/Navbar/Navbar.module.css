@@ -24,6 +24,11 @@
   margin-bottom: 1rem;
 }
 
+.navbar__link {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* Tampilan Medium screen */
 
 @media (min-width: 768px) {
