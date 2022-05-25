@@ -2,6 +2,7 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
 import Alert from "../Alert/Alert";
+import Button from "../ui/Button";
 import styles from "./AddMovieForm.module.css";
 
 function AddMovieForm(props) {
@@ -157,7 +158,9 @@ function AddMovieForm(props) {
                 <option value="Comedy">Comedy</option>
               </select>
               <br />
-              <button className={styles.hero__button}>Add Movie</button>
+              <Button variant="secondary" type="lg" full>
+                Submit
+              </Button>
               <br />
             </div>
           </form>

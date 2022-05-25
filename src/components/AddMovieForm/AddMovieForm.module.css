@@ -24,31 +24,36 @@
 .hero__h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #4361ee;
+  color: #b5179e;
 }
 
 .hero__label {
-  font-family: "Poppins";
+  font-family: "Montserrat";
   font-size: 24px;
   color: #64748b;
 }
 
 .hero__input {
-  border-color: #4361ee;
-  border-radius: 6px;
+  width: 100%;
+  height: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
 }
 
 .hero__button {
   margin-top: 1rem;
-  padding: 0.3rem 3.4rem;
   border: none;
-  border-radius: 8px;
-  background-color: #4361ee;
+  border-radius: 6px;
   color: #fff;
 }
 
 .hero__select {
-  margin-top: 0.5rem;
+  width: 100%;
+  height: 1.5rem;
+  margin: 1rem 0;
+  background-color: #b5179e;
+  border-radius: 4px;
+  color: #fff;
 }
 
 /* Tampilan Medium / Tab */
