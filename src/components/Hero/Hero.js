@@ -8,6 +8,7 @@ function Hero() {
   const [movie, setMovie] = useState("");
   const API_KEY = process.env.REACT_APP_API_KEY;
   const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
+  var random = Math.floor(Math.random() * 19 + 1);
   const trailer =
     movie && `https://www.youtube.com/watch?v=${movie.videos.results[0].key}`;
 
@@ -18,7 +19,7 @@ function Hero() {
   async function getTrendingMovie() {
     const URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;
     const response = await axios(URL);
-    return response.data.results[3];
+    return response.data.results[random];
   }
 
   // funsi untuk mendapatkan detail movie
