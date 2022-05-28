@@ -12,7 +12,7 @@ function Home() {
   return (
     <>
       <Hero />
-      <Movies movies={movies} setMovies={setMovies} />
+      <Movies title={"Latest"} movies={movies} setMovies={setMovies} />
       <AddMovieForm movies={movies} setMovies={setMovies} />
     </>
   );

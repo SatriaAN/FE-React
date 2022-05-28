@@ -4,7 +4,7 @@ import { nanoid } from "nanoid";
 
 function Movies(props) {
   // destructing props
-  const { movies, setMovies } = props;
+  const { movies, setMovies, title } = props;
 
   // Membuat fungsi untuk handle click
   function handleClick() {
@@ -25,7 +25,7 @@ function Movies(props) {
   return (
     <div className={styles.container}>
       <section className={styles.movies}>
-        <h2 className={styles.movies__title}>Latest Movies</h2>
+        <h2 className={styles.movies__title}>{props.title} Movies</h2>
         <div className={styles.movie__container}>
           {/*
            * looping map

@@ -5,6 +5,9 @@ const StyledHero = styled.div`
     margin: 1rem;
     flex-basis: 40%;
   }
+  a {
+    text-decoration: none;
+  }
   section {
     display: flex;
     flex-direction: column;
@@ -23,7 +26,7 @@ const StyledHero = styled.div`
   }
   p {
     color: #64748b;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   img {
     border: none;
