@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import StyledMovie from "./Movie.styled";
 
 // menangkap props
@@ -12,7 +13,9 @@ function Movie(props) {
         }
         alt=""
       />
-      <h3>{movie.title}</h3>
+      <Link to={`/movie/${movie.id}`}>
+        <h3>{movie.title}</h3>
+      </Link>
       <p>{movie.type}</p>
       <p>{movie.year || movie.release_date}</p>
     </StyledMovie>
