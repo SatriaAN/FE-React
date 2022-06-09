@@ -15,6 +15,8 @@ import theme from "./utils/theme";
  * @returns
  */
 function App() {
+  // lifting state movies ke App
+
   return (
     <>
       {/*

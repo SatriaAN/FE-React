@@ -1,31 +1,17 @@
 import Movie from "../Movie/Movie.js";
 import styles from "./Movies.module.css";
-import { nanoid } from "nanoid";
+import { useSelector } from "react-redux";
 
 function Movies(props) {
-  // destructing props
-  const { movies, setMovies, title } = props;
+  const { title } = props;
 
-  // Membuat fungsi untuk handle click
-  function handleClick() {
-    const movie = {
-      id: nanoid(),
-      title: "Ip Man",
-      year: 2022,
-      type: "Movie",
-      poster: "https://picsum.photos/300/400",
-    };
-
-    // Menjalankan fungsi setMovies
-    // Menambahkan movie ke dalam movies
-    // spread operator : copy data array
-    setMovies([...movies, movie]);
-  }
+  // mengirim movie ke movies di store
+  const movies = useSelector((store) => store.movies.movies);
 
   return (
     <div className={styles.container}>
       <section className={styles.movies}>
-        <h2 className={styles.movies__title}>{props.title} Movies</h2>
+        <h2 className={styles.movies__title}>{title} Movies</h2>
         <div className={styles.movie__container}>
           {/*
            * looping map
@@ -37,8 +23,6 @@ function Movies(props) {
             <Movie key={movie.id} movie={movie} />
           ))}
         </div>
-        {/* Membuat event onClick */}
-        <button onClick={handleClick}>Add Movie</button>
       </section>
     </div>
   );

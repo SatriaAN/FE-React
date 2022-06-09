@@ -28,9 +28,8 @@ function Hero() {
   async function getDetailMovie() {
     // mengambil id trending movie
     const trendingMovie = await getTrendingMovie();
-    const movieId = trendingMovie.id;
     // fetech detail movie by id
-    const response = await axios(ENDPOINTS.DETAIL(movieId));
+    const response = await axios(ENDPOINTS.DETAIL(trendingMovie.id));
 
     setMovie(response.data);
   }
