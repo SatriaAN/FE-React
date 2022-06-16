@@ -1,4 +1,7 @@
-// Membuat footer
+/**
+ * Membuat fungsi footer
+ * @returns footer
+ */
 
 function Footer() {
   return (
@@ -9,4 +12,5 @@ function Footer() {
   );
 }
 
+// Export Footer
 export default Footer;
