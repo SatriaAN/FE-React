@@ -18,17 +18,18 @@ const moviesSlice = createSlice({
     // membuat reducer untuk update state
     addMovie(state, action) {
       // data movie ada di payload
-      console.log(action.payload);
       state.movies.push(action.payload);
     },
-    deleteMovie() {},
+    updateMovies(state, action) {
+      state.movies = action.payload;
+    },
   },
 });
 
 // generate action dan reducers
 const moviesReducer = moviesSlice.reducer;
-const { addMovie, deleteMovie } = moviesSlice.actions;
+const { addMovie, updateMovies } = moviesSlice.actions;
 
 // Export Reducer dan actions
 export default moviesReducer;
-export { addMovie, deleteMovie };
+export { addMovie, updateMovies };

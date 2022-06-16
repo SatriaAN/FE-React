@@ -83,6 +83,7 @@ function AddMovieForm() {
     };
 
     dispatch(addMovie(movie));
+    console.log(movie);
     navigation("/");
   }
   function handleSubmit(e) {

@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import DetailMovie from "../../components/DetailMovie";
 import Movies from "../../components/Movies/Movies";
 import ENDPOINTS from "../../utils/endpoints";
+import { useDispatch } from "react-redux";
+import { updateMovies } from "../../features/moviesSlice";
 
 function Detail() {
   /**
@@ -11,22 +13,22 @@ function Detail() {
    * - fetch film berdasarkan rekomendasi
    */
   const params = useParams();
-  const [movies, setMovies] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     getRecomendationMovie();
   }, []);
 
   async function getRecomendationMovie() {
-    const response = await axios(ENDPOINTS.RECOMENDATIONx(params.id));
+    const response = await axios(ENDPOINTS.RECOMENDATION(params.id));
 
-    setMovies(response.data.results);
+    dispatch(updateMovies(response.data.results));
   }
 
   return (
     <div>
       <DetailMovie />
-      <Movies title="Recomendation" movies={movies} />
+      <Movies title="Recomendation" />
     </div>
   );
 }
