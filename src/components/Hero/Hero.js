@@ -19,7 +19,7 @@ function Hero() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   async function getTrendingMovie() {
     const response = await axios(ENDPOINTS.HERO);
-    return response.data.results[0];
+    return response.data.results[2];
   }
 
   // funsi untuk mendapatkan detail movie
