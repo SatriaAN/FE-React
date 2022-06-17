@@ -8,7 +8,6 @@ function Hero() {
   // Membuat state movie
   const [movie, setMovie] = useState("");
   const genres = movie && movie.genres.map((genre) => genre.name).join(", ");
-  let random = Math.floor(Math.random() * 19);
   const trailer =
     movie && `https://www.youtube.com/watch?v=${movie.videos.results[0].key}`;
 
@@ -20,7 +19,7 @@ function Hero() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   async function getTrendingMovie() {
     const response = await axios(ENDPOINTS.HERO);
-    return response.data.results[random];
+    return response.data.results[Math.floor(Math.random() * 3)];
   }
 
   // funsi untuk mendapatkan detail movie
