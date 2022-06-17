@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import DetailMovie from "../../components/DetailMovie";
 import Movies from "../../components/Movies/Movies";
