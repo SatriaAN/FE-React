@@ -9,7 +9,6 @@ import { updateMovies } from "../../features/moviesSlice";
 function PopularMovie() {
   const dispatch = useDispatch();
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     getPopularMovies();
   }, []);
