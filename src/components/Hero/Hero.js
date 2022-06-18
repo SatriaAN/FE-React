@@ -13,6 +13,7 @@ function Hero() {
 
   useEffect(() => {
     getDetailMovie();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Mengambil 1 data trending movie
