@@ -148,7 +148,6 @@ function AddMovieForm() {
               {setIsPosterError && <Alert>Link Image Harus di Isi</Alert>}
               <select
                 className={styles.hero__select}
-                id="type"
                 name="type"
                 value={type}
                 onChange={handleChange}
